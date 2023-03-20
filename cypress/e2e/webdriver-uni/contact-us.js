@@ -12,7 +12,7 @@ describe("Test Contantac Us for via WebDriverUni", () => {
 
         cy.get("[type='submit']").click();
 
-        cy.contains("Thank You for your Message!").should("be.visible", "Thank You for your Message!");
+        cy.contains("Thank You for your Message!").should("have.text", "Thank You for your Message!");
     });
     it("Should be not be able to submit a successful submission via contact us form as all fields are required", () => {
         cy.visit("http://www.webdriveruniversity.com");
