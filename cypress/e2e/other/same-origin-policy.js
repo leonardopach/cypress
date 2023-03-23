@@ -18,5 +18,7 @@ describe("Cypress web security", () => {
         cy.origin("automationteststore.com", () => {
             cy.visit("/");
         });
+
+        cy.visit("http://www.webdriveruniversity.com/")
     })
 });

@@ -1,5 +1,6 @@
+/// <reference types="cypress"/>
+
 describe("Test Contantac Us for via WebDriverUni", () => {
-    ///<reference type="cypress">
     it("Should be able to submit a successful submission via contact us form", () => {
         cy.visit("http://www.webdriveruniversity.com");
 
