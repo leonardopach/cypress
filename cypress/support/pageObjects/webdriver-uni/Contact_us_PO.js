@@ -5,9 +5,8 @@ class Contact_us_PO {
         cy.get("[name='last_name']").type(lastName);
         cy.get("[name='email']").type(email);
         cy.get("[name='message']").type(messages);
-        cy.screenshot("formulario preenchido");
         cy.get("[type='submit']").click();
-        cy.contains($messageCont).should($have, $messageCont).screenshot("teste");
+        cy.contains($messageCont).should($have, $messageCont);
         // cy.screenshot("Make a contact us form submission");
     }
 
