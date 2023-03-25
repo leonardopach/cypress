@@ -1,6 +1,6 @@
 /// <reference types="cypress"/>
 beforeEach(() => {
-    cy.visit("http://www.webdriveruniversity.com");
+    cy.visit("/");
 })
 describe("Hnadle js alerts", () => {
     it("confirm js alert contains the correct text", () => {

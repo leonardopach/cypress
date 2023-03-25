@@ -1,6 +1,6 @@
 /// <reference types="cypress"/>
 beforeEach(() => {
-    cy.visit("http://www.webdriveruniversity.com");
+    cy.visit("/");
 })
 
 describe("Interact with dropdown lists via webdriveruni", () => {
