@@ -8,8 +8,8 @@ describe('Get Request', () => {
             .its("status").should("equal", 200);
     });
 
-    it("Validate /posts api contains the correct keys and values", () => {
-        cy.request({
+    it.only("Validate /posts api contains the correct keys and values", () => {
+        cy.api({
             method: 'GET',
             url: 'http://localhost:3000/posts',
             headers: {
@@ -19,7 +19,6 @@ describe('Get Request', () => {
             let body = JSON.parse(JSON.stringify(response.body))
             expect(body[0]).has.property("title", "json-server");
             cy.log(body);
-
             body.forEach((item) => {
                 expect(item).to.have.all.keys("id", "title", "author");
                 cy.log(`Autor ${item["author"]}, & Title ${item["title"]}`);

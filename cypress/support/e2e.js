@@ -1,6 +1,7 @@
+import 'cypress-plugin-api';
+import './commands';
 require('@cypress/xpath');
 
-import './commands';
 
 // Hide fetch/XHR requests from command log
 if (Cypress.config("hideXHRInCommandLog")) {

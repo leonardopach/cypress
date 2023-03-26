@@ -3,7 +3,7 @@
 describe('Post Request', () => {
     let titleOfPosts = new Array();
     it('Create a new post via /posts api', () => {
-        cy.request({
+        cy.api({
             method: "POST",
             url: 'http://localhost:3000/posts',
             body: {
@@ -16,7 +16,7 @@ describe('Post Request', () => {
     });
 
     it("Validate title of latest post", () => {
-        cy.request({
+        cy.api({
             method: 'GET',
             url: 'http://localhost:3000/posts',
             headers: {
