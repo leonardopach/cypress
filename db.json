@@ -1,0 +1,39 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "title": "Want to learn automation testing?",
+      "author": "Sarah Jones",
+      "id": 2
+    },
+    {
+      "title": "Want to learn automation testing?",
+      "author": "Sarah Jones",
+      "id": 3
+    },
+    {
+      "title": "Want to learn automation testing?",
+      "author": "Sarah Jones",
+      "id": 4
+    },
+    {
+      "title": "Want to learn automation testing?",
+      "author": "Sarah Jones",
+      "id": 5
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
