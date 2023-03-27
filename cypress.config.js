@@ -13,7 +13,7 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
     specPattern: "cypress/e2e/**/*.{js,jsx,ts,tsx,feature}",
-    excludeSpecPattern: "cypress/e2e/{other,automation-test-store}/*.js",
+    excludeSpecPattern: "cypress/e2e/{other}/*.js",
     experimentalModifyObstructiveThirdPartyCode: true,
     defaultCommandTimeout: 5000,
     video: false,

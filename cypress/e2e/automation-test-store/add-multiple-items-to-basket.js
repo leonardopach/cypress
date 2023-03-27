@@ -13,7 +13,9 @@ describe("Add multiple items to basket", () => {
 
     it("Add specific items to basket ", () => {
         data.productName.forEach(element => {
-            cy.addProductToBasket(element)
+            cy.addProductToBasket(element).then(() => {
+                debugger
+            })
         })
         cy.get('.dropdown-toggle > .fa').click();
     });
