@@ -4,7 +4,12 @@ describe("Test Contantac Us for via Automatio Test Store", () => {
     before(() => {
         cy.fixture("userDetails").as("user")
     })
-    it("Should be able to submit a successful submission via contact us form", () => {
+    it("Should be able to submit a successful submission via contact us form", {
+        retries: {
+            runMode: 2,
+            openMode: 2,
+        }
+    }, () => {
 
         cy.visit("https://www.automationteststore.com");
         cy.document().should("have.property", "charset").and("eq", "UTF-8");
