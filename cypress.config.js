@@ -1,4 +1,5 @@
 const { defineConfig } = require("cypress");
+const cucumber = require('cypress-cucumber-preprocessor').default
 
 module.exports = defineConfig({
   projectId: 'esbzcj',
@@ -11,8 +12,9 @@ module.exports = defineConfig({
     baseUrl: "http://www.webdriveruniversity.com",
     setupNodeEvents(on, config) {
       // implement node event listeners here
+      on('file:preprocessor', cucumber())
     },
-    specPattern: "cypress/e2e/**/*.{js,jsx,ts,tsx,feature}",
+    specPattern: "cypress/e2e/**/*.{js,jsx,ts,tsx,feature,features}",
     excludeSpecPattern: "cypress/e2e/{other,api,webdriver-uni}/*.js",
     experimentalModifyObstructiveThirdPartyCode: true,
     defaultCommandTimeout: 5000,
